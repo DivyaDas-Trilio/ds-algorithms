@@ -10,7 +10,7 @@ def f(s, i, n):
         print("Palindrome")
     
 if __name__ == "__main__":
-    s = "ABCDCB"
+    s = "ABCDCBA"
     n = len(s)
     f(s, 0, n)
    
