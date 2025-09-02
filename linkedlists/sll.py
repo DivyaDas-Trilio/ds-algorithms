@@ -61,6 +61,14 @@ if __name__ == '__main__':
     while(new_head.next):
         print(new_head.data, end=" ")
         new_head = new_head.next
+        
+    print(f'\n{new_head.next}')   
+    
+    temp_head = Node(random.randint(10,50))
+    new_head.next = temp_head
+    new_head = temp_head
+        
+    print(f'\n{new_head.data}')  
     
     
         
