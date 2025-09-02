@@ -51,24 +51,38 @@ if __name__ == '__main__':
         if(count== 20):
             break
 
-    # Inserting at head
-    print(f"\nHEAD DATA:- {new_head.data}")
-    temp_head = Node(random.randint(10,50))
-    temp_head.next = new_head
-    new_head = temp_head
+    # # Inserting at head
+    # print(f"\nHEAD DATA:- {new_head.data}")
+    # temp_head = Node(random.randint(10,50))
+    # temp_head.next = new_head
+    # new_head = temp_head
     
-    # traversing
-    while(new_head.next):
-        print(new_head.data, end=" ")
+    # # traversing
+    # while(new_head.next):
+    #     print(new_head.data, end=" ")
+    #     new_head = new_head.next
+        
+    # print(f'\n{new_head.next}')   
+    
+    # temp_head = Node(random.randint(10,50))
+    # new_head.next = temp_head
+    # new_head = temp_head
+        
+    # print(f'\n{new_head.data}')  
+    
+    
+    # # deletion at begining
+    # new_head = new_head.next
+    # print(f"\n{new_head.data}")
+    
+    # deletion at end
+    while(new_head.next.next):
+        print(new_head.next.data)
         new_head = new_head.next
-        
-    print(f'\n{new_head.next}')   
+        # print(f"\n{new_head.data}")
+    print(f"\n{new_head.data}") 
+    new_head.next = None
     
-    temp_head = Node(random.randint(10,50))
-    new_head.next = temp_head
-    new_head = temp_head
-        
-    print(f'\n{new_head.data}')  
+    print(f"\n{new_head.data}")
     
     
-        
