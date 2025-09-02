@@ -39,14 +39,28 @@ if __name__ == '__main__':
     #         pass
     #     head = head.next
     import random
-    head = None
+    # head, new_head = None, None
     count = 0
-    while(not head):
-        head = Node(random.randint(10,50))
-        print(head.data)
+    head = Node(random.randint(10,50))
+    new_head = head
+    while(not head.next):
+        print(head.data, end=" ")
+        head.next = Node(random.randint(10,50))
         head = head.next
         count += 1
         if(count== 20):
             break
-        
+
+    # Inserting at head
+    print(f"\nHEAD DATA:- {new_head.data}")
+    temp_head = Node(random.randint(10,50))
+    temp_head.next = new_head
+    new_head = temp_head
+    
+    # traversing
+    while(new_head.next):
+        print(new_head.data, end=" ")
+        new_head = new_head.next
+    
+    
         
