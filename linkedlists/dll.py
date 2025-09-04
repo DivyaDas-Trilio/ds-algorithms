@@ -43,6 +43,19 @@ class DLL():
         head.prev = temp_head
         head = temp_head
         
+    def insert_at_end(self, head):
+        ret_head = head
+        while(head.next):
+            head = head.next
+            print(head.data, end=" ")
+            
+        temp_head = Node(data=50)
+        head.next = temp_head
+        temp_head.prev = head
+        print(head.next.data)
+        
+        return ret_head
+        
 
 if __name__ == '__main__':
     dll = DLL() 
@@ -54,3 +67,6 @@ if __name__ == '__main__':
     dll.insert_at_begin(ret_head)
     
     dll.print_dll(head)
+    
+    dll.insert_at_end(ret_head)
+    #dll.print_dll(head)
