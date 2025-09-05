@@ -1,10 +1,10 @@
 def f1(str, i, n, osf):
-    if(i==n):
+    if(i>=n):
+        print(osf)
         return
+    if(i%2 == 0):
+        osf = osf + str[i]
+    f1(str, i+2, n, osf)
     
-    f1(str, i+1, n, osf)
-    osf = osf + str[i]
-    print(osf, end="")
-    
-str = "abcde"
-f1(str, 0, 5, "")
+str = "abcdefg"
+f1(str, 0, 7, "")
