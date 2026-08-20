@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.next = next
 class Solution: # This is modified version of problem
-    def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def deleteDuplicates(self, head):
         temp_head = head
         temp_var = None
         try:
